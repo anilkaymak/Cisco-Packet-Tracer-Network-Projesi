@@ -85,21 +85,21 @@ IPV4 ACL(Router 0):
 ```
 en
 conf t
-ip access-list extended anil
-permit udp any host 192.168.1.2 eq 53
-permit tcp any host 192.168.1.3 eq 80
+ip access-list extended anil (Genişletilmiş erişim listesinde, paket filtreleme kaynak IP adresi, hedef IP adresi, port numaraları bazında gerçekleşir. Genişletilmiş bir erişim listesinde belirli hizmetlere izin verilir veya reddedilir.)
+permit udp any host 192.168.1.2 eq 53 (192.168.1.2 adresi için udp 53 portuna izin verilmiştir.)
+permit tcp any host 192.168.1.3 eq 80 (192.168.1.3 adresi için tcp 80 portuna izin verilmiştir.)
 int fa0/0
-ip access-group anil out
+ip access-group anil out (yönlendirici ACL'ye karşı bu arayüzü terk etmeye çalışan trafiği inceler.)
 ```
 IPV6 ACL(Router 0):
 ```
 en
 conf t
 ipv6 access-list anil6
-permit udp any host 1ef0:111:11:1::2 eq 53
-permit tcp any host 1ef0:111:11:1::3 eq 80
+permit udp any host 1ef0:111:11:1::2 eq 53 (1ef0:111:11:1::2 adresi için udp 53 portuna izin verilir.)
+permit tcp any host 1ef0:111:11:1::3 eq 80 (1ef0:111:11:1::3 adresi için tcp 80 portuna izin verilir.)
 int fa0/0
-ipv6 traffic-filter anil6 out
+ipv6 traffic-filter anil6 out (yönlendirici ACL'ye karşı bu arayüzü terk etmeye çalışan trafiği inceler.)
 ```
 ![image](https://user-images.githubusercontent.com/115885531/201959737-51a1647b-9612-4c97-ad53-8bdbd81e0ceb.png)
 ![image](https://user-images.githubusercontent.com/115885531/201959911-ae40686e-d32c-4cce-acd3-9c6f027e5bd7.png)
