@@ -76,3 +76,35 @@ IPV4 ve IPV6 Route Table:
 
 ![OSPF 4](https://user-images.githubusercontent.com/115885531/201953282-5a2af0bf-b0c0-4324-b49b-bd9e7b102b05.png)
 ![IPV6 ROUTE TABLE](https://user-images.githubusercontent.com/115885531/201953318-7313a5cc-0e0e-4b31-aedd-92d946d15fbb.png)
+
+### IPV4 ve IPV6 Access Control List
+ACL ağ trafiği için kullanılan kurallar kümesidir. Görevi ise kendi oluşturduğumuz kurallar ile hangi ağ trafiğinin izin verileceğini veya reddedeceğinin kontrolünü sağlar.
+Projede web server'ına sadece servis portu olan tcp 80 portundan, dns server'ına sadece servis portu olan udp 53 portundan hizmet verilmesi istenmektedir. OSPF protokolü ile haberleştirdiğimiz networkler birbilerine ping atabilirken, ACL ile internete erişim sağlanabilirken serverlarımıza herhangi bir ping atılamamaktadır.
+
+IPV4 ACL(Router 0):
+```
+en
+conf t
+ip access-list extended anil
+permit udp any host 192.168.1.2 eq 53
+permit tcp any host 192.168.1.3 eq 80
+int fa0/0
+ip access-group anil out
+```
+IPV6 ACL(Router 0):
+```
+en
+conf t
+ipv6 access-list anil6
+permit udp any host 1ef0:111:11:1::2 eq 53
+permit tcp any host 1ef0:111:11:1::3 eq 80
+int fa0/0
+ipv6 traffic-filter anil6 out
+```
+![image](https://user-images.githubusercontent.com/115885531/201959737-51a1647b-9612-4c97-ad53-8bdbd81e0ceb.png)
+![image](https://user-images.githubusercontent.com/115885531/201959911-ae40686e-d32c-4cce-acd3-9c6f027e5bd7.png)
+![image](https://user-images.githubusercontent.com/115885531/201959804-dbc99d8b-6508-49b7-bc32-ff7ea5964a1f.png)
+![image](https://user-images.githubusercontent.com/115885531/201959992-c17b29d4-ffde-4b93-b477-06d4705628b1.png)
+
+
+
