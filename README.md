@@ -37,4 +37,8 @@ no sh
 ipv6 add 1ef0:111:11:1::1/64
 ```
 
+![IPV4 KONF 9](https://user-images.githubusercontent.com/115885531/201946447-fdcfdf59-ce59-44ec-aaa0-d407d58bd3ea.png)
+
+Router 1'den Laptop 0'a yapılan ping testi:
+
 ### IPV4 ve IPV6 
