@@ -45,3 +45,27 @@ Router 1'den Laptop 0'a yapılan ping testi:
 
 ### IPV4 ve IPV6 Dynamic Routing OSPF
 OSPF, bir TCP/IP ağındaki router'ların birbirini otomatik olarak tanımasında kullanılan bir protokoldür. Bu protokol sayesinde farklı lokasyonlardaki networklerin biribirleriyle haberleşmesi sağlanır.
+
+Router 0 IPV4 OSPF konfigürasyonu:
+```
+en
+conf t
+router ospf 1
+network 192.168.1.0 0.0.0.255 area 0
+network 11.0.0.0 0.0.0.3 area 0
+network 13.0.0.0 0.0.0.3 area 0
+```
+Router 0 IPV6 OSPF konfigürasyonu:
+```
+en
+conf t
+ipv6 unicast-routing
+ipv6 ospf 1
+router-id 1.1.1.1
+int fa0/0
+ipv6 ospf 1 area 0
+int s0/0/0
+ipv6 ospf 1 area 0
+int s0/0/1
+ipv6 ospf 1 area 0
+```
