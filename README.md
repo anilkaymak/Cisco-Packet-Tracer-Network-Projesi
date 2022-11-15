@@ -50,8 +50,8 @@ Router 0 IPV4 OSPF konfigürasyonu:
 ```
 en
 conf t
-router ospf 1
-network 192.168.1.0 0.0.0.255 area 0
+router ospf 1 ("1" sayısı bir işlem kimliğidir ve istediğimiz herhangi bir sayıyı seçebiliriz.)
+network 192.168.1.0 0.0.0.255 area 0 (network çağrımı whitecard mask ile yapılır. Tek alanlı OSPF'yi yapılandırdık. Tüm yönlendiriciler 0 alanına aittir.)
 network 11.0.0.0 0.0.0.3 area 0
 network 13.0.0.0 0.0.0.3 area 0
 ```
@@ -59,7 +59,7 @@ Router 0 IPV6 OSPF konfigürasyonu:
 ```
 en
 conf t
-ipv6 unicast-routing
+ipv6 unicast-routing (Bir IPv6 yönlendirme tablosu oluşturur, arayüzlerde IPv6 adreslerini yapılandırmanıza izin verir )
 ipv6 ospf 1
 router-id 1.1.1.1
 int fa0/0
@@ -72,7 +72,7 @@ ipv6 ospf 1 area 0
 Router 1'den PC 0'a yapılan ping testi:
 ![image](https://user-images.githubusercontent.com/115885531/201952808-552a98b6-4d92-4b72-a54e-44c940d6b5b1.png)
 
-IPV4 vve IPV6 Route Table:
+IPV4 ve IPV6 Route Table:
 
 ![OSPF 4](https://user-images.githubusercontent.com/115885531/201953282-5a2af0bf-b0c0-4324-b49b-bd9e7b102b05.png)
 ![IPV6 ROUTE TABLE](https://user-images.githubusercontent.com/115885531/201953318-7313a5cc-0e0e-4b31-aedd-92d946d15fbb.png)
