@@ -43,4 +43,4 @@ Router 1'den Laptop 0'a yapılan ping testi:
 ![image](https://user-images.githubusercontent.com/115885531/201949158-576ce64c-9a70-46e5-91b2-67febd648d47.png)
 
 
-### IPV4 ve IPV6 
+### IPV4 ve IPV6 Dynamic Routing OSPF
