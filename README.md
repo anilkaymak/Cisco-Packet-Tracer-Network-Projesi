@@ -44,3 +44,4 @@ Router 1'den Laptop 0'a yapılan ping testi:
 
 
 ### IPV4 ve IPV6 Dynamic Routing OSPF
+OSPF, bir TCP/IP ağındaki router'ların birbirini otomatik olarak tanımasında kullanılan bir protokoldür. Bu protokol sayesinde farklı lokasyonlardaki networklerin biribirleriyle haberleşmesi sağlanır.
