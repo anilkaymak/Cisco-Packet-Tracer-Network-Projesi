@@ -9,13 +9,13 @@ Cisco tarafından tasarlanan Packet Tracer programı ile, 3 lokasyonlu hem IPV4 
 ![image](https://user-images.githubusercontent.com/115885531/201934233-4bd0177a-fdab-46fb-b9ea-7230c11ca057.png)
 
 ### IPV4 VE IPV6 KONFİGÜRASYONU
-Ağa bağlı kaynak ya da hedef cihazlar olarak tanımlanan end device'lar olan Laptop 0, PC 0 ve serverların "*Desktop*" arayüzünde bulunan "*IP Configuration*" sekmesine IPV4 ve IPV6 adresleri tanımlanır ve DNS ayarları yapılır.
+Ağa bağlı kaynak ya da hedef cihazlar olarak tanımlanan end device'lar olan Laptop 0, PC 0 ve serverların "*Desktop*" arayüzünde bulunan "*IP Configuration*" sekmesine IPV4 ve IPV6 adresleri tanımlandı ve DNS ayarları yapıldı.
 
 
 ![IPV6 KONF 1](https://user-images.githubusercontent.com/115885531/201941025-bbf0ad6b-d0ed-4341-b495-81a066092a28.png)
 ![DNS ayarı İPV6 ](https://user-images.githubusercontent.com/115885531/201941167-f014daf0-cffd-4941-a798-e16999b9d376.png)
 
-Routerların sırasıyla cli sekmesine girilerek fast ethernet ve serial arayüzlerine girilerek gerekli IPV4 ve IPV6 adresleri aşağıdaki kodlar sayesinde girilir. Gerekli düzenlemeler yapıldıktan sonra her networkun kendi içinde haberleştiği ama farklı lokasyondaki networklerin haberleşmediği ping testi yapılarak görülür.
+Routerların sırasıyla cli sekmesine girilerek fast ethernet ve serial arayüzlerine girilerek gerekli IPV4 ve IPV6 adresleri aşağıdaki kodlar sayesinde girildi. Gerekli düzenlemeler yapıldıktan sonra her networkun kendi içinde haberleştiği ama farklı lokasyondaki networklerin haberleşmediği ping testi yapılarak görüldü.
 
 Router 0 Konfigürasyonu:
 ```
