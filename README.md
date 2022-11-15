@@ -73,6 +73,6 @@ Router 1'den PC 0'a yapılan ping testi:
 ![image](https://user-images.githubusercontent.com/115885531/201952808-552a98b6-4d92-4b72-a54e-44c940d6b5b1.png)
 
 IPV4 vve IPV6 Route Table:
-![OSPF 4](https://user-images.githubusercontent.com/115885531/201953139-e0134fe7-24ea-4d7a-9523-f25acf78cc67.png)
-![IPV6 R![OSPF 4](https://user-images.githubusercontent.com/115885531/201952982-c02ec686-eb23-4c8c-89eb-31e74b129007.png)
 
+![OSPF 4](https://user-images.githubusercontent.com/115885531/201953282-5a2af0bf-b0c0-4324-b49b-bd9e7b102b05.png)
+![IPV6 ROUTE TABLE](https://user-images.githubusercontent.com/115885531/201953318-7313a5cc-0e0e-4b31-aedd-92d946d15fbb.png)
