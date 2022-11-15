@@ -69,3 +69,10 @@ ipv6 ospf 1 area 0
 int s0/0/1
 ipv6 ospf 1 area 0
 ```
+Router 1'den PC 0'a yapılan ping testi:
+![image](https://user-images.githubusercontent.com/115885531/201952808-552a98b6-4d92-4b72-a54e-44c940d6b5b1.png)
+
+IPV4 vve IPV6 Route Table:
+
+![IPV6 R![OSPF 4](https://user-images.githubusercontent.com/115885531/201952982-c02ec686-eb23-4c8c-89eb-31e74b129007.png)
+OUTE TABLE](https://user-images.githubusercontent.com/115885531/201952895-f48544e5-d529-4547-bc36-5ba4c0179bfd.png)
